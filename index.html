@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
   <title>Home Decor</title>
 </head>
 <body>
- <header class="main-header">
-  <nav class="nav-left">
+<header class="main-header">
+  <nav class="nav-left" id="navLeft">
     <ul class="nav-list">
       <li class="nav-item"><a href="#home">Home</a></li>
       <li class="nav-item"><a href="#about">About</a></li>
@@ -19,10 +20,10 @@
   </nav>
 
   <div class="brand-title">
-   <h1>HomeDecor</h1>
+    <h1>HomeDecor</h1>
   </div>
 
-  <nav class="nav-right">
+  <nav class="nav-right" id="navRight">
     <ul class="nav-list">
       <li class="nav-item"><a href="#decor">Decor</a></li>
       <li class="nav-item"><a href="#blog">Blog</a></li>
@@ -30,7 +31,7 @@
     </ul>
   </nav>
 
-  <div class="menu-icon-container">
+  <div class="menu-icon-container" id="menuBtn">
     <img src="assets/icons/menu.png" alt="Menu" class="menu-icon">
   </div>
 </header>
@@ -423,5 +424,17 @@
   </section>
 
   <script src="script.js"></script>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLeft = document.getElementById('navLeft');
+  const navRight = document.getElementById('navRight');
+
+  menuBtn.addEventListener('click', () => {
+    navLeft.style.display = navLeft.style.display === 'block' ? 'none' : 'block';
+    navRight.style.display = navRight.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
+
 </body>
 </html>

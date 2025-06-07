@@ -1,0 +1,71 @@
+@media only screen and (max-width: 780px) {
+    .footer{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactTxt{
+        width: 90%;
+        height: 800px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Base container flex setup */
+.contactBox {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .contactBox {
+    flex-direction: column; /* stack contact details and form vertically */
+    gap: 15px;
+  }
+  
+  .contactItem, .Contact-Form {
+    width: 100%; /* full width on small screens */
+  }
+  
+  .contactTxt p {
+    font-size: 14px;
+  }
+  
+  .contactTxt h1 {
+    font-size: 22px;
+  }
+  
+  input, textarea {
+    width: 100%; /* inputs full width */
+    box-sizing: border-box;
+  }
+  
+  .Contact-Btn1 {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .Icon i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
